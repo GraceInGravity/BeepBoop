@@ -1,5 +1,12 @@
 var beepBoop = function(numberUserTxt){
-  return numberUserTxt + 200;
+  var countingUp = [];
+  for (var i = 0; i < numberUserTxt; i++) {
+    countingUp.push(i);
+    console.log(i);
+    console.log(countingUp);
+  }
+
+  return countingUp;
 };
 
 $(document).ready(function() {
