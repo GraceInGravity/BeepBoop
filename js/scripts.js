@@ -1,8 +1,18 @@
+var beepBoop = function(numberUserTxt){
+  return numberUserTxt + 200;
+};
+
 $(document).ready(function() {
+
   $("form#beep-boop").submit(function(event) {
     event.preventDefault();
-    var year = parseInt($("input#numnumberUserTxt").val());
-    var result = leapYear(year);
+
+    var numberUserTxt = parseInt($("input#numberUserTxt").val());
+      console.log(numberUserTxt);
+
+    var result = beepBoop(numberUserTxt);
     $("#result").text(result);
+      console.log(result);
+      console.log(beepBoop);
   });
 });
