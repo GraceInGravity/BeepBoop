@@ -8,7 +8,7 @@ var beepBoop = function(numberUserTxt){
   }
   return countingUp;
 };
-    // Plan to make each number into an array and test each digit in a loop
+
 var dave = function(result){
   for (var i = 0; i < result.length; i++) {
     if (i=3) {
