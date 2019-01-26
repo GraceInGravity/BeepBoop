@@ -14,6 +14,9 @@ var dave = function(result){
     if (i=3) {
       result[i]="Sorry Dave I can't do that.";
       console.log(result);
+    };
+    if (i=2) {
+      result[i]="BOOP";
     }
       console.log("This is final result from dave" + result);
     return result;
