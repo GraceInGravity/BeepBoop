@@ -18,6 +18,10 @@ var dave = function(result){
     if (i=2) {
       result[i]="BOOP";
     }
+    if (i=1) {
+      result[i]="BEEP";
+    }
+
       console.log("This is final result from dave" + result);
     return result;
   }
