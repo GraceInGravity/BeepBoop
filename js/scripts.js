@@ -10,18 +10,12 @@ var beepBoop = function(numberUserTxt){
 };
 
 
-
-
     // Plan to make each number into an array and test each digit in a loop
 var dave = function(result){
   for (var i = 0; i < result.length; i++) {
-
-      // Trying to get i to recognize over 9 as a differnt choice.
-
-
+      // Get i to recognize over 9 as a differnt choice.
     if (i>=9) {
       // console.log("Start the split for over 9");
-
       individualLetters = [];
       result[i] = result[i].toString();
       console.log(result[i])
@@ -44,66 +38,33 @@ var dave = function(result){
           result[i] = "BEEP";
           j=individualLetters.length + 2;
         }
-
-
-
       }
-
-
-
-
-      // result[i]="test";
-
-
     }
-
     if (i==3) {
       result[i]="Sorry Dave I can't do that.";
       console.log(result);
     }
-
     if (i==2) {
       result[i]="BOOP";
     }
-
     if (i==1) {
       result[i]="BEEP";
     }
-
-}
+  }
       console.log("This is final result from dave" + result);
     return result;
-
-
-  // } Moving this above This is final results to troubleshoot.
-}
-
+  }
 
 $(document).ready(function() {
-
   $("form#beep-boop").submit(function(event) {
     event.preventDefault();
-
     var numberUserTxt = parseInt($("input#numberUserTxt").val());
-      console.log(numberUserTxt);
-
-      var result = beepBoop(numberUserTxt);
-
-
-
-      var nextResultDave = [];
-      nextResultDave = dave(result);
-
-
-
+    console.log(numberUserTxt);
+    var result = beepBoop(numberUserTxt);
+    var nextResultDave = [];
+    nextResultDave = dave(result);
     $("#result").text(nextResultDave);
       // console.log("result = " + result);
-
-    // $(#nextResultDave).text(nextResultDave);
     console.log("nextResultDave = " + nextResultDave);
-
   });
-
-
-
 });
