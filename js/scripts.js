@@ -21,24 +21,31 @@ var dave = function(result){
       console.log(result[i])
       individualLetters = result[i].split("");
       console.log(individualLetters);
-
+      var done = false;
       for(var j=0;j<=individualLetters.length-1;j++) {
 
         if (individualLetters[j] === "3"){
           result[i] = "Sorry Dave, I can't do that!";
-          j=individualLetters.length + 2;
-        }
-
-        if (individualLetters[j] === "2"){
-          result[i] = "BOOP!";
-          j=individualLetters.length + 2;
-        }
-
-        if (individualLetters[j] === "1"){
-          result[i] = "BEEP";
-          j=individualLetters.length + 2;
+          done = true;
+          // j=individualLetters.length + 2;
         }
       }
+
+      for(var j=0;j<=individualLetters.length-1;j++) {
+        if (individualLetters[j] === "2" && done !== true){
+          result[i] = "BOOP!";
+          done = true;
+          // j=individualLetters.length + 2;
+        }
+      }
+
+      for(var j=0;j<=individualLetters.length-1;j++) {
+        if (individualLetters[j] === "1" && done !== true){
+          result[i] = "BEEP";
+          // j=individualLetters.length + 2;
+        }
+      }
+
     }
     if (i==3) {
       result[i]="Sorry Dave I can't do that.";

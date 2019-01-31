@@ -7,6 +7,7 @@ It accepts user input and either writes out the number or writes out BEEP if the
 ##Credits
 written by Nuala Gray using both a PC and a Mac
 Thanks to mentoring help from Lena and Ben
+Thanks for troubleshooting help from Raven Gray.
 
 ##History
 January 2019
